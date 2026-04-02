@@ -32,7 +32,21 @@ Database:
 3. Start backend and frontend
 
 ## 📸 Screenshots
-(Add your project screenshots here)
+
+### Login Page
+![Login](screenshots/login1.png)
+
+### Dashboard
+![Dashboard](screenshots/super admin dashboard.png)
+
+### Ticket System
+![Ticket](screenshots/ticket.png)
+
+### Create Ticket
+![Create Ticket](screenshots/create ticket.png)
+
+### Analysis / Reports
+![Analysis](screenshots/analysis.png)
 
 ## 🔗 GitHub
 https://github.com/Shreekanth162006/helpdesk-application
