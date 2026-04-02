@@ -1,0 +1,37 @@
+/* Base & variables */
+:root {
+  --color-bg: #f7fafc;
+  --color-surface: #ffffff;
+  --color-primary: #3182ce;
+  --color-primary-hover: #2c5282;
+  --color-text: #2d3748;
+  --color-muted: #718096;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --radius: 8px;
+  --shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  line-height: 1.5;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Utility */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}

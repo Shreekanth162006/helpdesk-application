@@ -1,0 +1,205 @@
+# Helpy Helpdesk - Complete Requirements List
+# This file lists all required software, packages, and extensions
+
+## ============================================
+## SYSTEM REQUIREMENTS
+## ============================================
+
+### Operating System
+- Windows 10/11, macOS, or Linux
+- Minimum 4GB RAM (8GB recommended)
+- 2GB free disk space
+
+### Required Software
+1. Node.js v18.0.0 or higher
+   - Download: https://nodejs.org/
+   - Verify: `node --version`
+
+2. npm v9.0.0 or higher (comes with Node.js)
+   - Verify: `npm --version`
+
+3. PostgreSQL v12.0 or higher
+   - Download: https://www.postgresql.org/download/
+   - Default password used: root123
+   - Verify: `psql --version`
+
+4. Git (optional but recommended)
+   - Download: https://git-scm.com/downloads
+   - Verify: `git --version`
+
+## ============================================
+## BACKEND PACKAGES (backend/package.json)
+## ============================================
+
+### Production Dependencies
+bcryptjs@^2.4.3              # Password hashing
+cors@^2.8.5                  # Cross-origin resource sharing
+dotenv@^16.3.1               # Environment variable management
+express@^4.18.2              # Web application framework
+express-validator@^7.0.1    # Request validation middleware
+jsonwebtoken@^9.0.2          # JWT token generation/verification
+multer@^1.4.5-lts.1         # File upload middleware
+pg@^8.11.3                   # PostgreSQL database client
+sequelize@^6.35.2            # SQL ORM for PostgreSQL
+
+### Installation Command
+cd backend && npm install
+
+## ============================================
+## FRONTEND PACKAGES (frontend/package.json)
+## ============================================
+
+### Production Dependencies
+axios@^1.6.2                 # HTTP client for API calls
+react@^18.2.0                # UI library
+react-dom@^18.2.0            # React DOM renderer
+react-router-dom@^6.21.0     # Client-side routing
+@chakra-ui/react@^2.8.2      # Component library
+@emotion/react@^11.11.1      # CSS-in-JS library (Chakra dependency)
+@emotion/styled@^11.11.0     # Styled components (Chakra dependency)
+framer-motion@^10.16.16      # Animation library (Chakra dependency)
+
+### Development Dependencies
+@types/react@^18.2.43        # TypeScript types for React
+@types/react-dom@^18.2.17    # TypeScript types for React DOM
+@vitejs/plugin-react@^4.2.1  # Vite plugin for React
+vite@^5.0.8                  # Build tool and dev server
+
+### Installation Command
+cd frontend && npm install
+
+## ============================================
+## VS CODE / CURSOR EXTENSIONS
+## ============================================
+
+### Essential Extensions
+dbaeumer.vscode-eslint                    # JavaScript/TypeScript linting
+esbenp.prettier-vscode                    # Code formatter
+usernamehw.errorlens                      # Inline error highlighting
+christian-kohler.path-intellisense        # File path autocomplete
+formulahendry.auto-rename-tag             # Auto-rename HTML/JSX tags
+
+### Database Extensions
+cweijan.vscode-postgresql-client2         # PostgreSQL client
+mtxr.sqltools                             # Database management
+mtxr.sqltools-driver-pg                   # PostgreSQL driver for SQLTools
+
+### Optional Extensions
+eamodio.gitlens                           # Git supercharged
+christian-kohler.npm-intellisense        # npm module autocomplete
+eg2.vscode-npm-script                     # Run npm scripts from VS Code
+ms-vscode.vscode-json                     # JSON support
+bradlc.vscode-tailwindcss                 # Tailwind CSS IntelliSense
+
+### Installation
+Extensions are listed in .vscode/extensions.json
+VS Code/Cursor will prompt to install them automatically
+
+## ============================================
+## ENVIRONMENT VARIABLES (backend/.env)
+## ============================================
+
+PORT=4000
+NODE_ENV=development
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=helpy_db
+DB_USER=postgres
+DB_PASSWORD=root123
+JWT_SECRET=your-super-secret-jwt-key-change-in-production
+JWT_EXPIRES_IN=7d
+JWT_REFRESH_EXPIRES_IN=30d
+UPLOAD_DIR=./uploads
+MAX_FILE_SIZE_MB=10
+FRONTEND_URL=http://localhost:5173
+
+## ============================================
+## DATABASE SETUP
+## ============================================
+
+### PostgreSQL Database
+Database Name: helpy_db
+User: postgres
+Password: root123
+Host: localhost
+Port: 5432
+
+### Create Database Command
+CREATE DATABASE helpy_db;
+
+## ============================================
+## INSTALLATION CHECKLIST
+## ============================================
+
+### System Requirements
+[ ] Node.js installed (v18+)
+[ ] npm installed (v9+)
+[ ] PostgreSQL installed (v12+)
+[ ] PostgreSQL password set to: root123
+[ ] Database 'helpy_db' created
+
+### Backend Setup
+[ ] Navigate to backend directory
+[ ] Run: npm install
+[ ] Create/verify .env file
+[ ] Start server: npm run dev
+[ ] Verify: http://localhost:4000/api/health
+
+### Frontend Setup
+[ ] Navigate to frontend directory
+[ ] Run: npm install
+[ ] Start dev server: npm run dev
+[ ] Verify: http://localhost:5173
+
+### VS Code Extensions
+[ ] Install recommended extensions
+[ ] Verify ESLint is working
+[ ] Verify Prettier is working
+[ ] Verify PostgreSQL extension can connect
+
+## ============================================
+## QUICK INSTALL COMMANDS
+## ============================================
+
+# Install all backend packages
+cd backend && npm install
+
+# Install all frontend packages
+cd frontend && npm install
+
+# Start backend (Terminal 1)
+cd backend && npm run dev
+
+# Start frontend (Terminal 2)
+cd frontend && npm run dev
+
+## ============================================
+## VERIFICATION COMMANDS
+## ============================================
+
+# Check Node.js version
+node --version
+
+# Check npm version
+npm --version
+
+# Check PostgreSQL version
+psql --version
+
+# Check if backend dependencies are installed
+cd backend && npm list --depth=0
+
+# Check if frontend dependencies are installed
+cd frontend && npm list --depth=0
+
+## ============================================
+## NOTES
+## ============================================
+
+- All packages are managed via npm (Node Package Manager)
+- Backend runs on port 4000 by default
+- Frontend runs on port 5173 by default
+- Database tables are auto-created by Sequelize on first run
+- File uploads are stored in backend/uploads/ directory
+- JWT tokens are used for authentication
+- CORS is enabled for frontend-backend communication
