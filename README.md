@@ -31,19 +31,20 @@ Database:
 2. Run `npm install`
 3. Start backend and frontend
 
+
 ## 📸 Screenshots
 
 ### Login Page
 ![Login](screenshots/login1.png)
 
 ### Dashboard
-![Dashboard](screenshots/super admin dashboard.png)
+![Dashboard](screenshots/dashboard.png)
 
 ### Ticket System
 ![Ticket](screenshots/ticket.png)
 
 ### Create Ticket
-![Create Ticket](screenshots/create ticket.png)
+![Create Ticket](screenshots/create-ticket.png)
 
 ### Analysis / Reports
 ![Analysis](screenshots/analysis.png)
